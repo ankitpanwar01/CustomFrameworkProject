@@ -13,6 +13,8 @@
 		98E429CF2A825ED300F33A0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E429CD2A825ED300F33A0B /* Main.storyboard */; };
 		98E429D12A825ED500F33A0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E429D02A825ED500F33A0B /* Assets.xcassets */; };
 		98E429D42A825ED500F33A0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E429D22A825ED500F33A0B /* LaunchScreen.storyboard */; };
+		98E429E02A82605100F33A0B /* SDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E429DF2A82605100F33A0B /* SDK.swift */; };
+		98E429E32A8262BB00F33A0B /* CustomFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 98E429E22A8262BB00F33A0B /* CustomFramework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		98E429D02A825ED500F33A0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98E429D32A825ED500F33A0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98E429D52A825ED500F33A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98E429DF2A82605100F33A0B /* SDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98E429E32A8262BB00F33A0B /* CustomFramework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +62,7 @@
 			children = (
 				98E429C72A825ED300F33A0B /* AppDelegate.swift */,
 				98E429C92A825ED300F33A0B /* SceneDelegate.swift */,
+				98E429DF2A82605100F33A0B /* SDK.swift */,
 				98E429CB2A825ED300F33A0B /* ViewController.swift */,
 				98E429CD2A825ED300F33A0B /* Main.storyboard */,
 				98E429D02A825ED500F33A0B /* Assets.xcassets */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = CustomFrameworkProject;
+			packageProductDependencies = (
+				98E429E22A8262BB00F33A0B /* CustomFramework */,
+			);
 			productName = CustomFrameworkProject;
 			productReference = 98E429C42A825ED300F33A0B /* CustomFrameworkProject.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 98E429BB2A825ED300F33A0B;
+			packageReferences = (
+				98E429E12A8262BB00F33A0B /* XCRemoteSwiftPackageReference "CustomFramework" */,
+			);
 			productRefGroup = 98E429C52A825ED300F33A0B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +151,7 @@
 			files = (
 				98E429CC2A825ED300F33A0B /* ViewController.swift in Sources */,
 				98E429C82A825ED300F33A0B /* AppDelegate.swift in Sources */,
+				98E429E02A82605100F33A0B /* SDK.swift in Sources */,
 				98E429CA2A825ED300F33A0B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		98E429E12A8262BB00F33A0B /* XCRemoteSwiftPackageReference "CustomFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ankitpanwar01/CustomFramework.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		98E429E22A8262BB00F33A0B /* CustomFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98E429E12A8262BB00F33A0B /* XCRemoteSwiftPackageReference "CustomFramework" */;
+			productName = CustomFramework;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 98E429BC2A825ED300F33A0B /* Project object */;
 }
